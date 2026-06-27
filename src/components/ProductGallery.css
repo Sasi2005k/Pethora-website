@@ -1,0 +1,25 @@
+/* ProductGallery.css */
+
+.product-gallery {
+  padding: 2rem 0;
+  background: linear-gradient(135deg, rgba(255, 224, 178, 0.05), rgba(255, 255, 255, 0));
+}
+
+.gallery-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
