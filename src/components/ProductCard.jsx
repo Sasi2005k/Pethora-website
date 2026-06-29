@@ -61,19 +61,6 @@ export default function ProductCard({ product }) {
           alt={product.title}
           className={`product-image ${isFading ? 'fade-out' : 'fade-in'}`}
         />
-        {product.images && product.images.length > 1 && (
-          <div className="thumbnail-row">
-            {product.images.map((img, idx) => (
-              <img
-                key={idx}
-                src={img}
-                alt={`${product.title} ${idx + 1}`}
-                className={`thumbnail ${idx === currentImageIdx ? "active" : ""}`}
-                onClick={() => changeImage(idx)}
-              />
-            ))}
-          </div>
-        )}
       </div>
 
       <div className="product-info">
