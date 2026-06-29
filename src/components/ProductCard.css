@@ -20,6 +20,17 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.5rem;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.product-image.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product-image.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
 }
 
 .product-info {

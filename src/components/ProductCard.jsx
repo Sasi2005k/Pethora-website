@@ -37,11 +37,20 @@ const WhatsAppIcon = ({ size = 18 }) => (
 
 export default function ProductCard({ product }) {
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  const changeImage = (newIdx) => {
+    if (newIdx !== currentImageIdx && newIdx < product.images.length) {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentImageIdx(newIdx);
+        setIsFading(false);
+      }, 150); // triggers half-way through the 300ms transition
+    }
+  };
 
   const handleColorClick = (imageIdx) => {
-    if (imageIdx < product.images.length) {
-      setCurrentImageIdx(imageIdx);
-    }
+    changeImage(imageIdx);
   };
 
   return (
@@ -50,7 +59,7 @@ export default function ProductCard({ product }) {
         <img
           src={product.images[currentImageIdx]}
           alt={product.title}
-          className="product-image"
+          className={`product-image ${isFading ? 'fade-out' : 'fade-in'}`}
         />
         {product.images && product.images.length > 1 && (
           <div className="thumbnail-row">
@@ -60,7 +69,7 @@ export default function ProductCard({ product }) {
                 src={img}
                 alt={`${product.title} ${idx + 1}`}
                 className={`thumbnail ${idx === currentImageIdx ? "active" : ""}`}
-                onClick={() => setCurrentImageIdx(idx)}
+                onClick={() => changeImage(idx)}
               />
             ))}
           </div>
