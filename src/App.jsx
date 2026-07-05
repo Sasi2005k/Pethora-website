@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import ContactForm from './components/ContactForm';
 import ProductGallery from './components/ProductGallery';
+import KurthiGallery from './components/KurthiGallery';
+import NightyGallery from './components/NightyGallery';
 import {
   ArrowDown,
   ArrowRight,
@@ -38,8 +40,8 @@ const Instagram = (props) => (
 const menuItems = [
   { label: 'Home', target: 'home' },
   { label: 'Sarees', target: 'sarees' },
-  { label: 'Chudithars', target: 'chudithars' },
-  { label: 'Kurtis', target: 'kurtis' },
+  { label: 'Nighty & Sleepwear', target: 'chudithars' },
+  { label: 'Kurthi & Leggings', target: 'kurtis' },
   { label: 'Jewellery', target: 'jewellery' },
   { label: 'About', target: 'about' },
   { label: 'Contact', target: 'contact' }
@@ -71,14 +73,14 @@ const categoryPages = {
     ]
   },
   chudithars: {
-    eyebrow: 'Fluid Silhouettes',
-    title: 'Bespoke Chudithars',
-    image: '/chudithar.png',
+    eyebrow: 'Comfort & Style',
+    title: 'Nighty & Women Sleepwear',
+    image: '/nighty-hero.jpg',
     summary:
-      'Tailored comfort with mirror panels, zardozi details, rich dupattas, and graceful festive silhouettes.',
+      'Premium nightwear and sleepwear crafted for women — soft fabrics, elegant prints, and restful comfort.',
     intro:
-      'The chudithar collection is designed for movement. It keeps the traditional language intact while making room for breathable fits, softer linings, and thoughtful proportions.',
-    highlights: ['Custom-cut necklines', 'Embroidered dupattas', 'Festive and trousseau sets'],
+      'Our sleepwear collection combines comfort with style. Choose from breathable cotton nighties, printed sets, and soft-touch loungewear designed for restful nights and relaxed mornings.',
+    highlights: ['Soft cotton nighties', 'Printed sleepwear sets', 'Breathable lounge wear'],
     sections: [
       {
         title: 'Tailored Fit',
@@ -95,14 +97,14 @@ const categoryPages = {
     ]
   },
   kurtis: {
-    eyebrow: 'Everyday Luxe',
-    title: 'Designer Kurtis & Tunics',
+    eyebrow: 'Everyday Elegance',
+    title: 'Kurthi & Leggings Collection',
     image: '/kurti.png',
     summary:
-      'Modern cuts with heritage detailing, lightweight handlooms, cottons, and organza accents.',
+      'Stylish kurthis paired with matching leggings — perfect for everyday wear, casual outings, and festive occasions.',
     intro:
-      'Our kurtis are made for women who want everyday dressing to still feel composed. The silhouettes stay clean, with detail reserved for cuffs, necklines, hems, and delicate surface work.',
-    highlights: ['Office-to-evening edits', 'Fine cotton and linen blends', 'Botanical embroidery'],
+      'Our Kurthi & Leggings collection offers vibrant prints, ethnic embroidery, and comfortable fits that keep you looking polished all day long.',
+    highlights: ['Matching leggings sets', 'Cotton & linen blends', 'Ethnic embroidery prints'],
     sections: [
       {
         title: 'Modern Shapes',
@@ -203,6 +205,18 @@ function App() {
       <>
         <DetailPage page={categoryPages['sarees']} onNavigate={handleNavigate} />
         <ProductGallery />
+      </>
+    );
+    if (activePage === 'chudithars') return (
+      <>
+        <DetailPage page={categoryPages['chudithars']} onNavigate={handleNavigate} />
+        <NightyGallery />
+      </>
+    );
+    if (activePage === 'kurtis') return (
+      <>
+        <DetailPage page={categoryPages['kurtis']} onNavigate={handleNavigate} />
+        <KurthiGallery />
       </>
     );
     return <DetailPage page={categoryPages[activePage]} onNavigate={handleNavigate} />;
@@ -318,22 +332,6 @@ function DetailPage({ page, onNavigate }) {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="story-grid">
-        {page.sections.map((section, index) => (
-          <div className="story-card reveal-on-scroll" key={section.title}>
-            <span className="story-index">{String(index + 1).padStart(2, '0')}</span>
-            <h2>{section.title}</h2>
-            <p>{section.text}</p>
-          </div>
-        ))}
-      </section>
-
-      <section className="image-strip reveal-on-scroll">
-        {[0, 1, 2].map((item) => (
-          <img src={page.image} alt={`${page.title} detail ${item + 1}`} key={item} />
-        ))}
       </section>
     </article>
   );

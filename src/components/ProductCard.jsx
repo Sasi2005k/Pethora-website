@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import './ProductCard.css';
 
 const InstagramIcon = ({ size = 18 }) => (
@@ -38,6 +39,7 @@ const WhatsAppIcon = ({ size = 18 }) => (
 export default function ProductCard({ product }) {
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
 
   const changeImage = (newIdx) => {
     if (newIdx !== currentImageIdx && newIdx < product.images.length) {
@@ -60,6 +62,11 @@ export default function ProductCard({ product }) {
           src={product.images[currentImageIdx]}
           alt={product.title}
           className={`product-image ${isFading ? 'fade-out' : 'fade-in'}`}
+          onClick={() => setIsZoomed(true)}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = '/images/spay1.jpg';
+          }}
         />
       </div>
 
@@ -113,6 +120,32 @@ export default function ProductCard({ product }) {
           </a>
         )}
       </div>
+
+      {/* Image Zoom Modal rendered via Portal to escape stacking context */}
+      {isZoomed && createPortal(
+        <div className="image-zoom-modal" onClick={() => setIsZoomed(false)}>
+          <button 
+            className="close-zoom-btn" 
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsZoomed(false);
+            }}
+          >
+            &times;
+          </button>
+          <img 
+            src={product.images[currentImageIdx]} 
+            alt={product.title} 
+            className="zoomed-image" 
+            onClick={(e) => e.stopPropagation()} 
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = '/images/spay1.jpg';
+            }}
+          />
+        </div>,
+        document.body
+      )}
     </div>
   );
 }

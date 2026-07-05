@@ -49,6 +49,8 @@
   height: 250px;
   object-fit: cover;
   display: block;
+  cursor: zoom-in;
+  filter: contrast(1.1) saturate(1.1) brightness(1.05);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-in-out;
 }
 
@@ -150,6 +152,65 @@
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-btn.instagram-btn:hover {
+  background: rgba(225, 48, 108, 0.2);
+  border-color: #E1306C;
+  color: #E1306C;
+}
+
+/* Modal Zoom Styles */
+.image-zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInModal 0.3s forwards;
+  cursor: zoom-out;
+}
+
+@keyframes fadeInModal {
+  to { opacity: 1; }
+}
+
+.zoomed-image {
+  width: 90vw;
+  height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  transform: scale(0.9);
+  animation: zoomInImage 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+@keyframes zoomInImage {
+  to { transform: scale(1); }
+}
+
+.close-zoom-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+}
+
+.close-zoom-btn:hover {
+  transform: scale(1.2);
 }
 
 .whatsapp-btn:hover {
