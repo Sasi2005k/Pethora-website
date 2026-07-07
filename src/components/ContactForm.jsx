@@ -112,10 +112,10 @@ export default function ContactForm() {
               onChange={handleChange}
               style={{ background: '#170b24' }}
             >
-              <option value="Sarees">Royal Sarees & Silks</option>
-              <option value="Chudithars">Ethnic Chudithars</option>
-              <option value="Kurtis">Designer Kurtis</option>
-              <option value="Jewellery">Fine Kundan & Gold Jewellery</option>
+              <option value="Sarees">Sarees</option>
+              <option value="Chudithars">Nighty & Sleepwear</option>
+              <option value="Kurtis">Kurthi & Leggings</option>
+              <option value="Jewellery">Jewellery</option>
               <option value="Custom">Bespoke Bridal Consultations</option>
             </select>
           </div>
