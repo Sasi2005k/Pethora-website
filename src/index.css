@@ -1184,7 +1184,20 @@ textarea.form-input {
   .home-hero { padding: 5rem 0.8rem 2rem; }
   .home-hero h1 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
 
-  .btn-gold, .btn-outline { padding: 0.7rem 1.4rem; font-size: 0.78rem; }
+  .hero-actions,
+  .detail-copy .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .btn-gold, .btn-outline {
+    text-align: center;
+    width: 100%;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.78rem;
+  }
 
   .detail-page { padding-top: 6rem; }
   .detail-copy h1 { font-size: clamp(1.8rem, 7vw, 3rem); }
