@@ -36,21 +36,23 @@ export default function Header({ activeSection, menuItems, onNavigate }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open (iOS-safe)
+  // iOS-safe body scroll lock without resetting scroll position
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-    }
+    if (!isOpen) return undefined;
+
+    const preventScroll = (e) => {
+      // Allow scrolling inside the mobile drawer, but block scrolling outside
+      if (!e.target.closest('.mobile-drawer')) {
+        e.preventDefault();
+      }
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+
     return () => {
       document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
+      document.removeEventListener('touchmove', preventScroll);
     };
   }, [isOpen]);
 
