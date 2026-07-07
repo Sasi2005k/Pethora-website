@@ -164,7 +164,6 @@ export const kurthiProducts = [
     price: "549–599",
     category: "Kurthi",
     images: ["/images/kurti1.jpg"],
-    colors: [{ name: "Multicolour", hex: "#E8A045", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
   {
@@ -173,7 +172,6 @@ export const kurthiProducts = [
     price: 299,
     category: "Kurthi",
     images: ["/images/kurti2.jpg"],
-    colors: [{ name: "Assorted", hex: "#9B59B6", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
   {
@@ -182,7 +180,6 @@ export const kurthiProducts = [
     price: "549–599",
     category: "Kurthi",
     images: ["/images/kurti3.jpg"],
-    colors: [{ name: "Multicolour", hex: "#E74C3C", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
   {
@@ -191,7 +188,6 @@ export const kurthiProducts = [
     price: 449,
     category: "Kurthi",
     images: ["/images/kurti4.jpg"],
-    colors: [{ name: "Assorted", hex: "#1ABC9C", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
   {
@@ -200,7 +196,6 @@ export const kurthiProducts = [
     price: 349,
     category: "Kurthi",
     images: ["/images/kurti5.jpg"],
-    colors: [{ name: "Assorted", hex: "#3498DB", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
   {
@@ -209,7 +204,6 @@ export const kurthiProducts = [
     price: 249,
     category: "Kurthi",
     images: ["/images/kurti6.jpg"],
-    colors: [{ name: "Assorted", hex: "#F39C12", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
 ];
@@ -244,4 +238,72 @@ export const nightyProducts = [
     colors: [{ name: "Assorted", hex: "#A9DFBF", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   },
+];
+
+// ─── JEWELLERY (8 products) ───────────────────────────────────
+export const jewelleryProducts = [
+  {
+    id: "j1",
+    title: "Impon Kamal",
+    price: 330,
+    category: "Jewellery",
+    images: ["/images/jewelry1.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j2",
+    title: "Normal Kamal",
+    price: 30,
+    category: "Jewellery",
+    images: ["/images/jewelry2.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j3",
+    title: "Jhumka Kammal",
+    price: 99,
+    category: "Jewellery",
+    images: ["/images/jewelry3.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j4",
+    title: "Lakshmi Kamal",
+    price: 99,
+    category: "Jewellery",
+    images: ["/images/jewelry4.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j5",
+    title: "Fancy Kamal",
+    price: 80,
+    category: "Jewellery",
+    images: ["/images/jewelry5.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j6",
+    title: "Silver Kamal",
+    price: 35,
+    category: "Jewellery",
+    images: ["/images/jewelry6.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j7",
+    title: "Color Gold & Silver (For Rent)",
+    price: 1000,
+    category: "Jewellery",
+    images: ["/images/jewelry7.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j8",
+    title: "Imitation Jewellery",
+    price: 1750,
+    category: "Jewellery",
+    images: ["/images/jewelry8.jpg"],
+    whatsapp: WA, instagram: IG
+  }
 ];

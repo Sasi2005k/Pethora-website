@@ -4,6 +4,8 @@ import ContactForm from './components/ContactForm';
 import ProductGallery from './components/ProductGallery';
 import KurthiGallery from './components/KurthiGallery';
 import NightyGallery from './components/NightyGallery';
+import JewelleryGallery from './components/JewelleryGallery';
+import CustomerReviews from './components/CustomerReviews';
 import {
   ArrowDown,
   ArrowRight,
@@ -205,18 +207,28 @@ function App() {
       <>
         <DetailPage page={categoryPages['sarees']} onNavigate={handleNavigate} />
         <ProductGallery />
+        <CustomerReviews />
       </>
     );
     if (activePage === 'chudithars') return (
       <>
         <DetailPage page={categoryPages['chudithars']} onNavigate={handleNavigate} />
         <NightyGallery />
+        <CustomerReviews />
       </>
     );
     if (activePage === 'kurtis') return (
       <>
         <DetailPage page={categoryPages['kurtis']} onNavigate={handleNavigate} />
         <KurthiGallery />
+        <CustomerReviews />
+      </>
+    );
+    if (activePage === 'jewellery') return (
+      <>
+        <DetailPage page={categoryPages['jewellery']} onNavigate={handleNavigate} />
+        <JewelleryGallery />
+        <CustomerReviews />
       </>
     );
     return <DetailPage page={categoryPages[activePage]} onNavigate={handleNavigate} />;

@@ -55,6 +55,13 @@ export default function ProductCard({ product }) {
     changeImage(imageIdx);
   };
 
+  const getWhatsAppUrl = () => {
+    if (!product.whatsapp) return '';
+    const message = encodeURIComponent(`Hi! I'm interested in the ${product.title} (₹${product.price}). Could you provide more details?`);
+    const separator = product.whatsapp.includes('?') ? '&' : '?';
+    return `${product.whatsapp}${separator}text=${message}`;
+  };
+
   return (
     <div className="product-card">
       <div className="image-gallery">
@@ -97,7 +104,7 @@ export default function ProductCard({ product }) {
       <div className="product-links">
         {product.whatsapp && (
           <a 
-            href={product.whatsapp} 
+            href={getWhatsAppUrl()} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="social-btn whatsapp-btn"
