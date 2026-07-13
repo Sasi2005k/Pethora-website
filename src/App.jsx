@@ -52,16 +52,16 @@ const menuItems = [
 const categoryPages = {
   sarees: {
     eyebrow: 'Signature Drape',
-    title: 'Royal Silks & Kanjivarams',
+    title: 'Royal Silks',
     image: '/saree.png',
     summary:
       'Pure zari, heavy Mulberry silk, and temple-inspired motifs crafted for heirloom bridal moments.',
     intro:
       'Our saree edit is built around occasion, movement, and memory. Each piece is selected for its fall, border balance, zari quality, and how beautifully it photographs through ceremony light.',
-    highlights: ['Kanjivaram bridal silks', 'Soft tissue and organza drapes', 'Handloom festive edits'],
+    highlights: ['Bridal silks', 'Soft tissue and organza drapes', 'Handloom festive edits'],
     sections: [
       {
-        title: 'Bridal Kanjivarams',
+        title: 'Bridal Silks',
         text: 'Weighty silks with grand borders, contrast pallus, and traditional motifs for ceremonies that need presence.'
       },
       {
@@ -262,12 +262,12 @@ function HomePage({ onNavigate }) {
         <div className="home-hero__content reveal-on-scroll">
           <img className="brand-logo brand-logo--hero" src="/pethora-logo.png" alt="Pethora logo" />
           <div className="eyebrow-pill">Exquisite Indian Heritage</div>
-          <h1 className="font-accent">
-            DISCOVER TIMELESS <span>Elegance</span>
+          <h1 className="font-accent" style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)', lineHeight: 1.1 }}>
+            PETHORA <span style={{ display: 'block', fontSize: 'clamp(1rem, 3.5vw, 1.8rem)', letterSpacing: '0.15em', marginTop: '0.5rem' }}>Women's Wear & Jewellery</span>
           </h1>
           <p>
-            A curated boutique for sarees, chudithars, kurtis, and heritage jewellery.
-            Explore the full story, then step into each collection page for richer details.
+            An premium destination for royal silks, designer kurtis, sleepwear, and antique jewellery.
+            Journey through our heritage story below, then explore each collection.
           </p>
           <div className="hero-actions">
             <button className="btn-gold" onClick={() => onNavigate('sarees')}>
@@ -277,10 +277,65 @@ function HomePage({ onNavigate }) {
               Book Styling
             </button>
           </div>
-          <button className="scroll-cue" onClick={() => document.getElementById('sarees')?.scrollIntoView({ behavior: 'smooth' })}>
-            <span>Scroll to preview</span>
+          <button className="scroll-cue" onClick={() => document.getElementById('heritage-story')?.scrollIntoView({ behavior: 'smooth' })}>
+            <span>Explore Our Story</span>
             <ArrowDown size={18} className="animate-float" />
           </button>
+        </div>
+      </section>
+
+      {/* Cinematic Storytelling Section */}
+      <section id="heritage-story" className="storytelling-narrative">
+        <div className="storytelling-bg-glow" />
+        
+        <div className="section-heading reveal-on-scroll">
+          <Sparkles size={18} className="text-gold" />
+          <h2>The Pethora Chronicles</h2>
+          <p>A heritage woven across threads, time, and luxury adornments.</p>
+        </div>
+
+        <div className="narrative-container">
+          <div className="narrative-step reveal-on-scroll">
+            <div className="narrative-card">
+              <span className="narrative-tag">Chapter I</span>
+              <h3>The Sacred Drape</h3>
+              <p>Every premium saree we curate starts with selected mulberry silk and rich zari threads, woven to reflect the graceful posture and heritage of the modern goddess.</p>
+              <button className="narrative-btn" onClick={() => onNavigate('sarees')}>
+                Explore Sarees <ArrowRight size={14} />
+              </button>
+            </div>
+            <div className="narrative-visual">
+              <div className="visual-circle" style={{ backgroundImage: 'url("/saree.png")' }} />
+            </div>
+          </div>
+
+          <div className="narrative-step reveal-on-scroll alternate">
+            <div className="narrative-card">
+              <span className="narrative-tag">Chapter II</span>
+              <h3>Grace in Movement</h3>
+              <p>Our Kurthi, Leggings, and Sleepwear lines merge daily comfort with aesthetic layouts. Designed to transition smoothly from busy days into serene, restful nights.</p>
+              <button className="narrative-btn" onClick={() => onNavigate('kurtis')}>
+                Explore Kurtis <ArrowRight size={14} />
+              </button>
+            </div>
+            <div className="narrative-visual">
+              <div className="visual-circle" style={{ backgroundImage: 'url("/kurti.png")' }} />
+            </div>
+          </div>
+
+          <div className="narrative-step reveal-on-scroll">
+            <div className="narrative-card">
+              <span className="narrative-tag">Chapter III</span>
+              <h3>Heirlooms of Gold</h3>
+              <p>Our Kundan and Antique Jewellery completes the luxury silhouette, curated carefully to frame your facial aesthetics with the rich finish of passed-down treasures.</p>
+              <button className="narrative-btn" onClick={() => onNavigate('jewellery')}>
+                Explore Jewellery <ArrowRight size={14} />
+              </button>
+            </div>
+            <div className="narrative-visual">
+              <div className="visual-circle" style={{ backgroundImage: 'url("/jewellery.png")' }} />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -288,7 +343,7 @@ function HomePage({ onNavigate }) {
         <div className="section-heading reveal-on-scroll">
           <Sparkles size={18} className="text-gold" />
           <h2>Explore The Collections</h2>
-          <p>Each page now has space for more images, styling notes, and story content.</p>
+          <p>Step directly into each collection page for prices, details, and customization options.</p>
         </div>
 
         <div className="overview-stack">
