@@ -530,7 +530,7 @@ function ContactPage() {
           <div className="shop-map-embed">
             <iframe
               title="Pethora Boutique - Shop No 4, Jai Raj Complex, Nanjikottai"
-              src="https://maps.google.com/maps?q=10.7521938,79.1226907&t=&z=17&ie=UTF8&iwloc=B&output=embed"
+              src="https://maps.google.com/maps?q=PETHORA+WOMEN%27S+WEAR+%26+JEWELLERY,+Nanjikottai,+Tamil+Nadu+613005&ll=10.7521938,79.1226907&z=17&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
