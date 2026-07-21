@@ -38,7 +38,7 @@ export const products = [
   },
   {
     id: 4,
-    title: "Vali Cotton Saree",
+    title: "Voile Saree",
     price: 430,
     category: "Cotton",
     images: ["/images/vali1.jpg", "/images/vali2.jpg"],
@@ -151,6 +151,15 @@ export const products = [
     category: "Cotton",
     images: ["/images/saree15.jpg"],
     colors: [{ name: "Mulmul", hex: "#FFFAFA", imageIdx: 0 }],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: 16,
+    title: "Linen Cotton Saree",
+    price: "499-560",
+    category: "Cotton",
+    images: ["/images/saree16.jpg"],
+    colors: [{ name: "Cotton", hex: "#F5DEB3", imageIdx: 0 }],
     whatsapp: WA, instagram: IG
   }
 ];
@@ -304,6 +313,30 @@ export const jewelleryProducts = [
     price: 1750,
     category: "Jewellery",
     images: ["/images/jewelry8.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j9",
+    title: "Short Neck Design Chain",
+    price: 600,
+    category: "Jewellery",
+    images: ["/images/jewelry9.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j10",
+    title: "Lakshmi Fancy Chain",
+    price: 699,
+    category: "Jewellery",
+    images: ["/images/jewelry10.jpg"],
+    whatsapp: WA, instagram: IG
+  },
+  {
+    id: "j11",
+    title: "Short Chain",
+    price: 599,
+    category: "Jewellery",
+    images: ["/images/jewelry11.jpg"],
     whatsapp: WA, instagram: IG
   }
 ];

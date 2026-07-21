@@ -1461,3 +1461,64 @@ textarea.form-input {
     height: 220px;
   }
 }
+
+/* ─── Luxury Slogan Bar ──────────────────────────────────────── */
+.luxury-slogan-bar {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: rgba(11, 7, 16, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  margin-top: var(--header-height);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.luxury-slogan-text {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  animation: sloganGoldGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes sloganGoldGlow {
+  0% {
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+    letter-spacing: 0.22em;
+    opacity: 0.8;
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+    letter-spacing: 0.24em;
+    opacity: 0.85;
+  }
+}
+
+/* Ensure content spacing doesn't clash with slogan bar */
+.page-content {
+  padding-top: 1rem !important; /* reduce standard padding since slogan bar adds space */
+}
+
+@media (max-width: 768px) {
+  .luxury-slogan-text {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+  }
+  .luxury-slogan-bar {
+    padding: 0.6rem 0.8rem;
+  }
+}

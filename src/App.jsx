@@ -247,6 +247,9 @@ function App() {
       {!loading && (
         <>
           <Header activeSection={activePage} menuItems={menuItems} onNavigate={handleNavigate} />
+          <div className="luxury-slogan-bar">
+            <span className="luxury-slogan-text">Every thread Whispers Elegance</span>
+          </div>
           <main className="content-wrapper page-content">{renderPage()}</main>
           <SiteFooter />
         </>

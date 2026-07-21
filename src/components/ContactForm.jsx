@@ -32,7 +32,23 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Construct pre-filled message for the owner's WhatsApp
+    const messageText = `Hello Pethora, I would like to book a styling consultation:
+- Name: ${formState.name}
+- Email: ${formState.email}
+- Phone: ${formState.phone}
+- Collection: ${formState.inquiry}
+- Message: ${formState.message}`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/918903557852?text=${encodedMessage}`;
+
     setSubmitted(true);
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
     setTimeout(() => {
       setSubmitted(false);
       setFormState({ name: '', email: '', phone: '', inquiry: 'Sarees', message: '' });
