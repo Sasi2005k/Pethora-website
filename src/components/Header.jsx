@@ -16,6 +16,13 @@ const WhatsAppIcon = ({ size = 20 }) => (
   </svg>
 );
 
+const FacebookIcon = ({ size = 20 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 export default function Header({ activeSection, menuItems, onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -99,6 +106,10 @@ export default function Header({ activeSection, menuItems, onNavigate }) {
             className="header-social-icon" aria-label="Instagram" title="Instagram">
             <InstagramIcon size={20} />
           </a>
+          <a href="https://www.facebook.com/share/197Wz9mZHg/" target="_blank" rel="noopener noreferrer"
+            className="header-social-icon" aria-label="Facebook" title="Facebook">
+            <FacebookIcon size={20} />
+          </a>
         </div>
 
         {/* Hamburger Button */}
@@ -162,6 +173,10 @@ export default function Header({ activeSection, menuItems, onNavigate }) {
             target="_blank" rel="noopener noreferrer"
             className="drawer-social-btn instagram">
             <InstagramIcon size={18} /> Instagram
+          </a>
+          <a href="https://www.facebook.com/share/197Wz9mZHg/" target="_blank" rel="noopener noreferrer"
+            className="drawer-social-btn facebook" style={{ background: 'rgba(24,119,242,0.1)', color: '#1877F2', border: '1px solid rgba(24,119,242,0.25)' }}>
+            <FacebookIcon size={18} /> Facebook
           </a>
         </div>
       </nav>

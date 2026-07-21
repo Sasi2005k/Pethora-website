@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, PhoneCall, MapPin } from 'lucide-react';
+import { Send, PhoneCall, MapPin, Facebook } from 'lucide-react';
 
 const Instagram = (props) => (
   <svg
@@ -162,7 +162,7 @@ export default function ContactForm() {
           borderTop: '1px solid rgba(212, 175, 55, 0.2)',
           paddingTop: '1.5rem',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
           gap: '1rem',
           textAlign: 'center'
         }}
@@ -214,7 +214,30 @@ export default function ContactForm() {
         </a>
 
         <a 
-          href="https://www.google.com/maps/search/?api=1&query=Madhakottai%20Road%20Thanjavur" 
+          href="https://www.facebook.com/share/197Wz9mZHg/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="glass-panel-light"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '1rem',
+            color: 'var(--beige)',
+            textDecoration: 'none',
+            fontSize: '0.85rem',
+            gap: '0.5rem',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--gold)'}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'}
+        >
+          <Facebook size={20} className="text-gold" />
+          <span style={{ fontWeight: '500' }}>Facebook Page</span>
+        </a>
+
+        <a 
+          href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" 
           target="_blank" 
           rel="noopener noreferrer"
           className="glass-panel-light"

@@ -39,6 +39,23 @@ const Instagram = (props) => (
   </svg>
 );
 
+const Facebook = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size || 24}
+    height={props.size || 24}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={props.className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 const menuItems = [
   { label: 'Home', target: 'home' },
   { label: 'Sarees', target: 'sarees' },
@@ -463,13 +480,17 @@ function ContactPage() {
           <PhoneCall size={20} className="text-gold" />
           <span>+91 89035 57852</span>
         </a>
-        <a href="https://maps.app.goo.gl/haeUcgqoHz8NpFJs5?g_st=aw" target="_blank" rel="noopener noreferrer">
+        <a href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" target="_blank" rel="noopener noreferrer">
           <MapPin size={20} className="text-gold" />
           <span>Madhakottai Road, Thanjavur</span>
         </a>
         <a href="https://instagram.com/pethora_womenswear" target="_blank" rel="noopener noreferrer">
           <Instagram size={20} className="text-gold" />
-          <span>@pethora_womenswear</span>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/197Wz9mZHg/" target="_blank" rel="noopener noreferrer">
+          <Facebook size={20} className="text-gold" />
+          <span>Facebook</span>
         </a>
       </div>
       <div className="contact-shell reveal-on-scroll">
