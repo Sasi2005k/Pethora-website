@@ -480,12 +480,7 @@ function ContactPage() {
           <PhoneCall size={20} className="text-gold" />
           <span>+91 89035 57852</span>
         </a>
-        <a href="https://www.google.com/maps/place/PETHORA+WOMEN'S+WEAR+%26+JEWELLERY/@10.7521938,79.1226907,17z" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <MapPin size={24} className="text-gold" style={{ flexShrink: 0 }} />
-          <span style={{ fontSize: '0.82rem', lineHeight: '1.4', textAlign: 'left' }}>
-            Shop no 4, Jai Raj complex, Plot no 3, Madhakottai Rd, 7th bank staff colony, Annai Sathya Nagar, Nanjikottai, Tamil Nadu 613005
-          </span>
-        </a>
+
         <a href="https://instagram.com/pethora_womenswear" target="_blank" rel="noopener noreferrer">
           <Instagram size={20} className="text-gold" />
           <span>Instagram</span>
