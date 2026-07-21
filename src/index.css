@@ -1522,3 +1522,130 @@ textarea.form-input {
     padding: 0.6rem 0.8rem;
   }
 }
+
+/* ===== SHOP LOCATION SECTION ===== */
+.shop-location-section {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.shop-location-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.shop-location-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.shop-location-card {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.1);
+  background: linear-gradient(135deg, rgba(34, 13, 52, 0.9) 0%, rgba(20, 5, 35, 0.95) 100%);
+}
+
+.shop-address-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: linear-gradient(160deg, rgba(212, 175, 55, 0.07) 0%, rgba(139, 90, 43, 0.04) 100%);
+  border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.shop-address-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.shop-name-label {
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.shop-address-block address {
+  font-style: normal;
+  color: var(--beige);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.shop-hours,
+.shop-phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--beige-dark);
+  font-size: 0.78rem;
+}
+
+.shop-hours span:first-child,
+.shop-phone span:first-child {
+  font-size: 1rem;
+}
+
+.btn-open-maps {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: #1a0a00;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-open-maps:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.shop-map-embed {
+  height: 300px;
+  min-height: 260px;
+}
+
+.shop-map-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .shop-location-card {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-address-block {
+    border-right: none;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .shop-map-embed {
+    height: 220px;
+  }
+}
+

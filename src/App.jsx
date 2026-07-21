@@ -439,7 +439,7 @@ function AboutPage({ onNavigate }) {
           <div className="founder-signature">
             <span className="font-accent text-gold">Founder</span>
             <strong>K. Selvarani</strong>
-            <p>Guiding Pethora from Madhakottai Road, Thanjavur with a love for graceful women's wear and jewellery.</p>
+            <p>Guiding Pethora from Jai Raj Complex, Madhakottai Road, Thanjavur with a love for graceful women's wear and jewellery.</p>
           </div>
           <button className="btn-gold" onClick={() => onNavigate('contact')}>
             Meet Our Stylist
@@ -480,9 +480,11 @@ function ContactPage() {
           <PhoneCall size={20} className="text-gold" />
           <span>+91 89035 57852</span>
         </a>
-        <a href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" target="_blank" rel="noopener noreferrer">
-          <MapPin size={20} className="text-gold" />
-          <span>Madhakottai Road, Thanjavur</span>
+        <a href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <MapPin size={24} className="text-gold" style={{ flexShrink: 0 }} />
+          <span style={{ fontSize: '0.82rem', lineHeight: '1.4', textAlign: 'left' }}>
+            Shop no 4, Jai Raj complex, Plot no 3, Madhakottai Rd, 7th bank staff colony, Annai Sathya Nagar, Nanjikottai, Tamil Nadu 613005
+          </span>
         </a>
         <a href="https://instagram.com/pethora_womenswear" target="_blank" rel="noopener noreferrer">
           <Instagram size={20} className="text-gold" />
@@ -493,6 +495,58 @@ function ContactPage() {
           <span>Facebook</span>
         </a>
       </div>
+
+      {/* Shop Location Map Section */}
+      <div className="shop-location-section reveal-on-scroll">
+        <div className="shop-location-header">
+          <MapPin size={22} className="text-gold" />
+          <h2>Find Our Boutique</h2>
+        </div>
+        <div className="shop-location-card">
+          <div className="shop-address-block">
+            <div className="shop-address-info">
+              <span className="shop-name-label">PETHORA BOUTIQUE</span>
+              <address>
+                Shop No. 4, Jai Raj Complex,<br />
+                Plot No. 3, Madhakottai Rd,<br />
+                7th Bank Staff Colony,<br />
+                Annai Sathya Nagar, Nanjikottai,<br />
+                Tamil Nadu &#8211; 613005
+              </address>
+              <div className="shop-hours">
+                <span>&#128336;</span>
+                <span>Mon &#8211; Sat: 9:00 AM &#8211; 8:00 PM</span>
+              </div>
+              <div className="shop-phone">
+                <span>&#128222;</span>
+                <span>+91 89035 57852</span>
+              </div>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-open-maps"
+            >
+              <MapPin size={16} />
+              Open in Google Maps
+            </a>
+          </div>
+          <div className="shop-map-embed">
+            <iframe
+              title="Pethora Boutique - Shop No 4, Jai Raj Complex, Nanjikottai"
+              src="https://maps.google.com/maps?q=Shop+no+4+Jai+Raj+complex+Madhakottai+Rd+Nanjikottai+Tamil+Nadu+613005&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="contact-shell reveal-on-scroll">
         <ContactForm />
       </div>

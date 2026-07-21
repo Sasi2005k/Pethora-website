@@ -277,20 +277,69 @@ export default function ContactForm() {
         </a>
       </div>
 
-      {/* Styled Google Maps Iframe */}
+      {/* Shop Location Card */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(139,90,43,0.05) 100%)',
+        border: '1px solid rgba(212, 175, 55, 0.35)',
+        borderRadius: '12px',
+        padding: '1.25rem',
+        marginBottom: '0.5rem'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '1rem' }}>
+          <MapPin size={22} className="text-gold" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <p style={{ fontWeight: '700', color: 'var(--gold)', fontSize: '0.9rem', marginBottom: '0.25rem', letterSpacing: '0.05em' }}>
+              PETHORA BOUTIQUE
+            </p>
+            <p style={{ color: 'var(--beige)', fontSize: '0.82rem', lineHeight: '1.6', margin: 0 }}>
+              Shop No. 4, Jai Raj Complex,<br />
+              Plot No. 3, Madhakottai Rd,<br />
+              7th Bank Staff Colony,<br />
+              Annai Sathya Nagar, Nanjikottai,<br />
+              Tamil Nadu – 613005
+            </p>
+          </div>
+        </div>
+        <a
+          href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.4rem',
+            background: 'linear-gradient(135deg, var(--gold) 0%, #b8860b 100%)',
+            color: '#1a0a00',
+            fontWeight: '700',
+            fontSize: '0.78rem',
+            letterSpacing: '0.08em',
+            padding: '0.5rem 1rem',
+            borderRadius: '6px',
+            textDecoration: 'none',
+            transition: 'opacity 0.2s'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'}
+          onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+        >
+          <MapPin size={14} />
+          Open in Google Maps
+        </a>
+      </div>
+
+      {/* Google Maps Embed */}
       <div 
         style={{
-          borderRadius: '8px',
+          borderRadius: '12px',
           overflow: 'hidden',
-          border: '1px solid rgba(212, 175, 55, 0.25)',
-          height: '180px',
+          border: '1px solid rgba(212, 175, 55, 0.3)',
+          height: '240px',
           width: '100%',
-          boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+          boxShadow: '0 8px 25px rgba(0,0,0,0.4)'
         }}
       >
         <iframe
           title="Pethora Boutique Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9731215162447!2d80.2526848757917!3d12.973562687342082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d640989f665%3A0xe54e66ffb38a4d46!2sPethora!5e0!3m2!1sen!2sin!4v1718256565000!5m2!1sen!2sin"
+          src="https://maps.google.com/maps?q=Shop+no+4+Jai+Raj+complex+Plot+no+3+Madhakottai+Rd+Nanjikottai+Tamil+Nadu+613005&t=&z=16&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
