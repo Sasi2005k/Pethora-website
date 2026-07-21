@@ -254,7 +254,7 @@ export default function ContactForm() {
         </a>
 
         <a 
-          href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" 
+          href="https://www.google.com/maps/place/PETHORA+WOMEN'S+WEAR+%26+JEWELLERY/@10.7521938,79.1226907,17z" 
           target="_blank" 
           rel="noopener noreferrer"
           className="glass-panel-light"
@@ -301,7 +301,7 @@ export default function ContactForm() {
           </div>
         </div>
         <a
-          href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw"
+          href="https://www.google.com/maps/place/PETHORA+WOMEN'S+WEAR+%26+JEWELLERY/@10.7521938,79.1226907,17z"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -339,7 +339,7 @@ export default function ContactForm() {
       >
         <iframe
           title="Pethora Boutique Location"
-          src="https://maps.google.com/maps?q=Shop+no+4+Jai+Raj+complex+Plot+no+3+Madhakottai+Rd+Nanjikottai+Tamil+Nadu+613005&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=10.7521938,79.1226907&t=&z=17&ie=UTF8&iwloc=B&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

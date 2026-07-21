@@ -480,7 +480,7 @@ function ContactPage() {
           <PhoneCall size={20} className="text-gold" />
           <span>+91 89035 57852</span>
         </a>
-        <a href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <a href="https://www.google.com/maps/place/PETHORA+WOMEN'S+WEAR+%26+JEWELLERY/@10.7521938,79.1226907,17z" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <MapPin size={24} className="text-gold" style={{ flexShrink: 0 }} />
           <span style={{ fontSize: '0.82rem', lineHeight: '1.4', textAlign: 'left' }}>
             Shop no 4, Jai Raj complex, Plot no 3, Madhakottai Rd, 7th bank staff colony, Annai Sathya Nagar, Nanjikottai, Tamil Nadu 613005
@@ -523,7 +523,7 @@ function ContactPage() {
               </div>
             </div>
             <a
-              href="https://maps.app.goo.gl/yWZSsxSb2ZpRt4Wd6?g_st=aw"
+              href="https://www.google.com/maps/place/PETHORA+WOMEN'S+WEAR+%26+JEWELLERY/@10.7521938,79.1226907,17z"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-open-maps"
@@ -535,7 +535,7 @@ function ContactPage() {
           <div className="shop-map-embed">
             <iframe
               title="Pethora Boutique - Shop No 4, Jai Raj Complex, Nanjikottai"
-              src="https://maps.google.com/maps?q=Shop+no+4+Jai+Raj+complex+Madhakottai+Rd+Nanjikottai+Tamil+Nadu+613005&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=10.7521938,79.1226907&t=&z=17&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
