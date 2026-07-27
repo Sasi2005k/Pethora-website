@@ -23,6 +23,14 @@ const FacebookIcon = ({ size = 20 }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ size = 20 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+    <path d="m10 15 5-3-5-3z" />
+  </svg>
+);
+
 export default function Header({ activeSection, menuItems, onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -110,6 +118,10 @@ export default function Header({ activeSection, menuItems, onNavigate }) {
             className="header-social-icon" aria-label="Facebook" title="Facebook">
             <FacebookIcon size={20} />
           </a>
+          <a href="https://www.youtube.com/@pethorawomenswearjewellery" target="_blank" rel="noopener noreferrer"
+            className="header-social-icon" aria-label="YouTube" title="YouTube">
+            <YoutubeIcon size={20} />
+          </a>
         </div>
 
         {/* Hamburger Button */}
@@ -177,6 +189,10 @@ export default function Header({ activeSection, menuItems, onNavigate }) {
           <a href="https://www.facebook.com/share/197Wz9mZHg/" target="_blank" rel="noopener noreferrer"
             className="drawer-social-btn facebook" style={{ background: 'rgba(24,119,242,0.1)', color: '#1877F2', border: '1px solid rgba(24,119,242,0.25)' }}>
             <FacebookIcon size={18} /> Facebook
+          </a>
+          <a href="https://www.youtube.com/@pethorawomenswearjewellery" target="_blank" rel="noopener noreferrer"
+            className="drawer-social-btn youtube" style={{ background: 'rgba(255,0,0,0.1)', color: '#FF0000', border: '1px solid rgba(255,0,0,0.25)' }}>
+            <YoutubeIcon size={18} /> YouTube
           </a>
         </div>
       </nav>

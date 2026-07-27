@@ -56,6 +56,24 @@ const Facebook = (props) => (
   </svg>
 );
 
+const Youtube = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size || 24}
+    height={props.size || 24}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={props.className}
+  >
+    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+    <path d="m10 15 5-3-5-3z" />
+  </svg>
+);
+
 const menuItems = [
   { label: 'Home', target: 'home' },
   { label: 'Sarees', target: 'sarees' },
@@ -488,6 +506,10 @@ function ContactPage() {
         <a href="https://www.facebook.com/share/197Wz9mZHg/" target="_blank" rel="noopener noreferrer">
           <Facebook size={20} className="text-gold" />
           <span>Facebook</span>
+        </a>
+        <a href="https://www.youtube.com/@pethorawomenswearjewellery" target="_blank" rel="noopener noreferrer">
+          <Youtube size={20} className="text-gold" />
+          <span>YouTube</span>
         </a>
       </div>
 

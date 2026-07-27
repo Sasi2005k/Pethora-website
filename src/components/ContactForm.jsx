@@ -37,6 +37,24 @@ const Facebook = (props) => (
   </svg>
 );
 
+const Youtube = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size || 24}
+    height={props.size || 24}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={props.className}
+  >
+    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+    <path d="m10 15 5-3-5-3z" />
+  </svg>
+);
+
 export default function ContactForm() {
   const [formState, setFormState] = useState({
     name: '',
@@ -251,6 +269,29 @@ export default function ContactForm() {
         >
           <Facebook size={20} className="text-gold" />
           <span style={{ fontWeight: '500' }}>Facebook Page</span>
+        </a>
+
+        <a 
+          href="https://www.youtube.com/@pethorawomenswearjewellery" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="glass-panel-light"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '1rem',
+            color: 'var(--beige)',
+            textDecoration: 'none',
+            fontSize: '0.85rem',
+            gap: '0.5rem',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--gold)'}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'}
+        >
+          <Youtube size={20} className="text-gold" />
+          <span style={{ fontWeight: '500' }}>YouTube Channel</span>
         </a>
 
         <a 
